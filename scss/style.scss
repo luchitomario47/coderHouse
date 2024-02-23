@@ -1,0 +1,159 @@
+// Importa los módulos necesarios de SASS
+@use "sass:map";
+@use "sass:meta";
+@use "sass:math";
+@use "sass:color";
+@use "sass:string";
+@use "sass:selector";
+
+// Define un mixin para el reset de márgenes y rellenos
+@mixin reset-margin-padding {
+  padding: 0;
+  margin: 0;
+}
+
+// Define un mixin para los estilos de enlaces
+@mixin link-styles {
+  text-decoration: none;
+  color: black;
+}
+
+// Define un mixin para los estilos de encabezados
+@mixin header-styles {
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+// Define un mixin para los estilos de pie de página
+@mixin footer-styles {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  background-color: azure;
+}
+
+// Define un mixin para los estilos de encabezado principal h1
+@mixin h1-styles {
+  text-align: center;
+  text-decoration: solid;
+  color: black;
+  padding-top: 20px;
+}
+
+// Define un mixin para los estilos de encabezados h2
+@mixin h2-styles {
+  text-align: center;
+  text-decoration: double;
+  color: blueviolet;
+}
+
+// Define un mixin para los estilos generales del cuerpo
+@mixin body-styles {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 20px;
+  font-family: Arial, sans-serif; // Cambia la fuente según tus preferencias
+}
+
+// Define un mixin para los estilos generales del contenido principal
+@mixin main-styles {
+  flex: 1;
+}
+
+// Define un mixin para los estilos de imágenes de Proyectos
+@mixin img-styles {
+  max-height: 210px;
+  max-width: auto;
+}
+
+// Reset de márgenes y rellenos para todos los elementos
+* {
+  @include reset-margin-padding;
+}
+
+// Elimina los puntos de lista y la decoración de los enlaces
+h5 a {
+  @include link-styles;
+}
+
+// Estilos generales del cuerpo
+body {
+  @include body-styles;
+}
+
+// Estilos comunes para encabezado, contenido principal y pie de página
+header, main, footer {
+  padding: 20px;
+}
+
+// Estilos específicos para encabezado y pie de página
+header, footer {
+  @include header-styles;
+}
+
+// Estilos para el pie de página
+footer {
+  @include footer-styles;
+}
+
+// Estilos para el encabezado principal h1
+h1 {
+  @include h1-styles;
+}
+
+// Estilos para encabezados h2
+h2 {
+  @include h2-styles;
+}
+
+// Estilos generales para el contenido principal
+main {
+  @include main-styles;
+}
+
+// Estilo para imágenes de Proyectos
+img {
+  @include img-styles;
+}
+
+// Media query para dispositivos pequeños (teléfonos)
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  // Otros ajustes para dispositivos pequeños según sea necesario
+}
+
+// Media query para dispositivos medianos (tabletas)
+@media (min-width: 576px) and (max-width: 991.98px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  // Otros ajustes para dispositivos medianos según sea necesario
+}
+
+// Media query para dispositivos grandes (escritorio)
+@media (min-width: 992px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+}

@@ -1,37 +1,31 @@
-/* Reset de márgenes y rellenos para todos los elementos */
 * {
   padding: 0;
   margin: 0;
 }
 
-/* Elimina los puntos de lista y la decoración de los enlaces */
 h5 a {
   text-decoration: none;
   color: black;
 }
 
-/* Estilos generales del cuerpo */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 20px;
-  font-family: Arial, sans-serif; /* Cambia la fuente según tus preferencias */
+  font-family: Arial, sans-serif;
 }
 
-/* Estilos comunes para encabezado, contenido principal y pie de página */
 header, main, footer {
   padding: 20px;
 }
 
-/* Estilos específicos para encabezado y pie de página */
 header, footer {
   background-color: #333;
   color: white;
   text-align: center;
 }
 
-/* Estilos para el pie de página */
 footer {
   margin-top: auto;
   display: flex;
@@ -41,67 +35,51 @@ footer {
   background-color: azure;
 }
 
-/* Estilos para el encabezado principal h1 */
 h1 {
   text-align: center;
-  text-decoration: solid;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
   color: black;
   padding-top: 20px;
 }
 
-/* Estilos para encabezados h2 */
 h2 {
   text-align: center;
-  text-decoration: double;
+  -webkit-text-decoration: double;
+          text-decoration: double;
   color: blueviolet;
 }
 
-/* Estilos generales para el contenido principal */
 main {
   flex: 1;
 }
 
-/* Estilo para imágenes de Proyectos */
 img {
   max-height: 210px;
   max-width: auto;
 }
 
-/* Media query para dispositivos pequeños (teléfonos) */
 @media (max-width: 575.98px) {
   h1 {
     font-size: 24px;
   }
-
   h2 {
     font-size: 20px;
   }
-
-  /* Otros ajustes para dispositivos pequeños según sea necesario */
 }
-
-/* Media query para dispositivos medianos (tabletas) */
 @media (min-width: 576px) and (max-width: 991.98px) {
   h1 {
     font-size: 30px;
   }
-
   h2 {
     font-size: 24px;
   }
-
-  /* Otros ajustes para dispositivos medianos según sea necesario */
 }
-
-/* Media query para dispositivos grandes (escritorio) */
 @media (min-width: 992px) {
   h1 {
     font-size: 36px;
   }
-
   h2 {
     font-size: 28px;
   }
-
-  /* Otros ajustes para dispositivos grandes según sea necesario */
-}
+}/*# sourceMappingURL=style.css.map */
